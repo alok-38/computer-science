@@ -7,14 +7,16 @@ int main(void) {
 
     printf("Enter your age: ");
     scanf("%d", &age);
+    getchar();  // Consume leftover newline from previous scanf
 
-
-    if (age < 0 && isupper(grade) || islower(grade)) {
-        printf("Age cannot be negative and grade needs to be a letter!\n");
-    }
-
-    printf("Enter your grade(lower or upper case): ");
+    printf("Enter your grade (lower or upper case): ");
     scanf("%c", &grade);
+
+    if (age < 0 || !(isalpha(grade))) {
+        printf("Invalid input: Age cannot be negative and grade must be a letter!\n");
+    } else {
+        printf("Age: %d, Grade: %c\n", age, toupper(grade));
+    }
 
     return 0;
 }
