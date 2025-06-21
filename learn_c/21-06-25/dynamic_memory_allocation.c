@@ -7,13 +7,21 @@ void demoDynamicMemory()
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    int *arr = (int *)malloc(n * sizeof(int));
+    // Input validation
+    if (n <= 0)
+    {
+        printf("Number of elements must be a positive integer.\n");
+        return;
+    }
+
+    // Use calloc for zero-initialized memory
+    int *arr = (int *)calloc(n, sizeof(int));
     if (arr == NULL)
     {
         printf("Memory allocation failed!\n");
         return;
     }
-
+    
     printf("Enter %d integers:\n", n);
     for (int i = 0; i < n; i++)
     {
