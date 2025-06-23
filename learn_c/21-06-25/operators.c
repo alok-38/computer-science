@@ -38,4 +38,53 @@ void doSomethingWithOperators()
     printf("(a > 0) && (b > 0): %d\n", (a > 0) && (b > 0));
     printf("(a < 0) || (b > 0): %d\n", (a < 0) || (b > 0));
     printf("!(a == b): %d\n", !(a == b));
+
+    // Bitwise Operators
+    printf("Bitwise AND: %d & %d = %d\n", a, b, a & b);
+    printf("Bitwise OR: %d | %d = %d\n", a, b, a | b);
+    printf("Bitwise XOR: %d ^ %d = %d\n", a, b, a ^ b);
+    printf("Bitwise NOT: ~%d = %d\n", a, ~a);
+    printf("Left shift: %d << 1 = %d\n", a, a << 1);
+    printf("Right shift: %d >> 1 = %d\n", a, a >> 1);
+
+    // Assignment Operators
+    int c = a; // Copy a into c
+    c += b;    // c = c + b
+    printf("c += b: %d\n", c);
+
+    c = a;  // Reset c
+    c -= b; // c = c - b
+    printf("c -= b: %d\n", c);
+
+    c = a;  // Reset c
+    c *= b; // c = c * b
+    printf("c *= b: %d\n", c);
+
+    c = a;  // Reset c
+    c /= b; // c = c / b
+    printf("c /= b: %d\n", c);
+
+    c = a;  // Reset c
+    c %= b; // c = c % b
+    printf("c %%= b: %d\n", c);
+
+    c = a;  // Reset c
+    c &= b; // c = c & b
+    printf("c &= b: %d\n", c);
+
+    c = a;  // Reset c
+    c |= b; // c = c | b
+    printf("c |= b: %d\n", c);
+
+    c = a;  // Reset c
+    c ^= b; // c = c ^ b
+    printf("c ^= b: %d\n", c);
+
+    c = a;   // Reset c
+    c <<= 1; // c = c << 1
+    printf("c <<= 1: %d\n", c);
+
+    c = a;   // Reset c
+    c >>= 1; // c = c >> 1
+    printf("c >>= 1: %d\n", c);
 }
