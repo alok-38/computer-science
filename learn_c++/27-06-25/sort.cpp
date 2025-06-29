@@ -6,5 +6,6 @@ int main()
 {
     std::vector<int> v = {4, 2, 5, 1};
     std::sort(v.begin(), v.end());
-    
+    for (int x : v)
+        std::cout << x << " ";
 }
