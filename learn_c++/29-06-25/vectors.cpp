@@ -14,4 +14,16 @@ int main()
     {
         cout << i << " ";
     }
+    // Initialize a vector of five elements
+    vector<int> v2(5);
+    // Iterate over them
+    for (int i = 0; i < v2.size(); i++)
+    {
+        cout << v2[i] << endl;
+    }
+    cout << endl;
+    for (auto iterat = v.begin(); iterat != v.end(); ++iterat)
+    {
+        cout << *iterat << " ";
+    }
 }
