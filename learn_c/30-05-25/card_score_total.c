@@ -14,7 +14,6 @@ int main()
         return 1;
     }
 
-    // Allocate memory dynamically for the card scores
     int *card_scores = (int *)malloc(number_of_cards * sizeof(int));
     if (card_scores == NULL)
     {
@@ -22,14 +21,12 @@ int main()
         return 1;
     }
 
-    // Read the score for each card
     for (int i = 0; i < number_of_cards; i++)
     {
         printf("Enter score for card %d: ", i + 1);
         scanf("%d", &card_scores[i]);
     }
 
-    // Sum up all the card scores
     int total_score = 0;
     for (int i = 0; i < number_of_cards; i++)
     {
@@ -38,7 +35,9 @@ int main()
 
     printf("Total score is: %d\n", total_score);
 
-    // Free the dynamically allocated memory
+    int average = total_score / number_of_cards;
+    printf("Average is: %d\n", average);
+
     free(card_scores);
 
     return 0;
