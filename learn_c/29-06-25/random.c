@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define MAX_RANDOM 100
+
 int main()
 {
     // Seed the random number generator with the current time
@@ -11,6 +13,6 @@ int main()
     int r = rand();
     printf("Random number: %d\n", r);
     // Generate a random number between 0 and 99
-    int r100 = rand() % 100;
+    int r100 = rand() % MAX_RANDOM;
     printf("Random number (0-99): %d\n", r100);
 }
