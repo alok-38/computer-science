@@ -9,4 +9,7 @@ int main(void)
     printf("Address: %p\n", address);
     // dereferencing
     printf("Pointer dereferenced: %d\n", *address);
+    // change the value of variabe using the pointer
+    *address = 20;
+    printf("After: variable = %d\n", variabe);
 }
