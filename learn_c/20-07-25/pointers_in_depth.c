@@ -18,5 +18,11 @@ int main(void)
 
     // Next vaue in the array
     printf("Next value in array: %d\n", *(parr + 1));
+
+    // Revison
+    int arrp[5] = {10, 20, 30, 40, 50};
+    // Same as: int *ptr = &arr[0];
+    int *parr2 = arrp;
+    printf("%d\n", *(parr2 + 2));
     return 0;
 }
