@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    outline: unset;
+    border: unset;
+    background: transparent;
+    padding: .75rem;
+    cursor: pointer;
+    border: 1px salmon solid;
+}
+
+button {
+    margin-right: 15px;
+}
+
+.container {
+    max-width: 840px;
+    margin: 50px auto 0 auto;
+}
+
+input {
+    padding-right: 15px;
+    width: 250px;
+    margin-right: 15px;
+}
