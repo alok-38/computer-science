@@ -3,11 +3,9 @@ using namespace std;
 
 int main()
 {
-    float balance, deposite, withdraw;
+    float balance = 0.0f, deposite = 0.0f, withdraw = 0.0f;
     int choice;
     char exitChoice;
-
-    balance = 0;
 
     while (true)
     {
@@ -24,20 +22,47 @@ int main()
         case 1:
             cout << "Balance: " << balance << endl;
             break;
+
         case 2:
-            cout << "Deposite: " << deposite << endl;
+            cout << "Enter deposit amount: ";
+            cin >> deposite;
+            if (deposite > 0)
+            {
+                balance += deposite;
+                cout << "Deposited: " << deposite << endl;
+            }
+            else
+            {
+                cout << "Invalid deposit amount!" << endl;
+            }
             break;
+
         case 3:
-            cout << "Withdraw: " << withdraw << endl;
+            cout << "How much you want to withdraw: ";
+            cin >> withdraw;
+            if (withdraw > balance)
+            {
+                cout << "Insufficient balance! Withdrawal cancelled." << endl;
+            }
+            else if (withdraw <= 0)
+            {
+                cout << "Invalid withdrawal amount!" << endl;
+            }
+            else
+            {
+                balance -= withdraw;
+                cout << "Withdrawn: " << withdraw << endl;
+            }
             break;
+
         case 0:
             cout << "Are you sure you want to exit? Y/y or N/n: ";
             cin >> exitChoice;
 
             if (exitChoice == 'Y' || exitChoice == 'y')
             {
-                cout << "Exiting... Goodbye!\n";
-                exit(0); // or break out of the loop
+                cout << "Thank you for banking with us... Goodbye!\n";
+                exit(0);
             }
             else if (exitChoice == 'N' || exitChoice == 'n')
             {
@@ -55,4 +80,6 @@ int main()
             break;
         }
     }
+
+    return 0;
 }
